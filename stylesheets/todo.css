@@ -1,0 +1,9 @@
+ul.todos {
+  padding: 4px;
+  list-style-type: none;
+}
+
+li.done {
+  text-decoration: line-through;
+  color: gray;
+}

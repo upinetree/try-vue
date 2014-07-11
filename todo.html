@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src='bower_components/vue/dist/vue.js'></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/todo.css" media="all">
+  <title>vue todo</title>
+</head>
+<body>
+<div id="todo">
+  <h1>{{title}}</h1>
+  <ul class="todos">
+    <li v-repeat="t : todos | orderBy 'isDone'" class="{{t.isDone ? 'done' : ''}}">
+      <label>
+        <input type="checkbox" v-model="t.isDone" />
+        {{t.title}}
+      </label>
+    </li>
+  </ul>
+
+  <input type="text" v-model="newTodoTitle" v-on="keyup: addTodo | key enter" />
+  <input type="button" v-on="click: addTodo" value="add todo" />
+  <input type="button" v-on="click: removeDone" value="remove done" />
+</div>
+
+<script src='javascripts/todo_app.js'></script>
+</body>
+</html>

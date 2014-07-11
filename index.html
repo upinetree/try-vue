@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src='bower_components/vue/dist/vue.js'></script>
+  <title>Try vue</title>
+</head>
+<body>
+
+<div id="test1" v-on="click: notify('hello from DOM')">click</div>
+<div id="test2">
+  <span>合計: </span>
+  <span v-model="totalScore"></span>
+</div>
+<div id="test3"></div>
+
+<script src='javascripts/1.js'></script>
+<script src='javascripts/2.js'></script>
+<script src='javascripts/3.js'></script>
+</body>
+</html>
