@@ -11,6 +11,12 @@ var app = new Vue({
     newTodoTitle: ''
   },
 
+  components: {
+    todo: {
+      template: "<label><input type='checkbox' v-model='isDone' />{{title}}</label>"
+    }
+  },
+
   created: function() {
     this.title = "My Todos";
     var initialTodos = ["task A", "task B", "task C"];
